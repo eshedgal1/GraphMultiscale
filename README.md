@@ -96,6 +96,6 @@ python transductive_datasets.py
   author        = {Gal, Eshed and Eliasof, Moshe and Sch{\"o}nlieb, Carola-Bibiane and Kyrchei, Ivan I. and Haber, Eldad and Treister, Eran},
   journal       = {Transactions on Machine Learning Research},
   year          = {2025},
-  url           = {https://arxiv.org/abs/2503.19666},
+  url           = {https://arxiv.org/pdf/2503.19666},
 }
 ```
