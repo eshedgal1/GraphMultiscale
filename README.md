@@ -63,7 +63,7 @@ python transductive_datasets.py
 
 ---
 
-### Inductive / Molecule / Point Cloud Datasets
+### Inductive / Point Cloud Datasets
 - **PPI (inductive):**
   ```bash
   python PPI.py
