@@ -81,7 +81,7 @@ def main():
     for net in args.nets:
         model, optimizer = init_model(net, dataset, data, device)
 
-        for k in args.p_vals:
+        for p in args.p_vals:
             for n_levels in args.levels:
                 for method in args.methods:
                     if n_levels == 1:
@@ -96,14 +96,14 @@ def main():
 
                     print(f"number of fine epochs:", n_fine_epochs, flush=True)
                     print(f"Model: {net}", flush=True)
-                    print(f"Using method {method} with {n_levels} levels and connectivity {k}:", flush=True)
+                    print(f"Using method {method} with {n_levels} levels and connectivity {p}:", flush=True)
 
                     # Get results across multiple runs
                     train_accs, val_accs, test_accs = [], [], []
                     for run in range(args.n_runs):
                         model.reset_parameters()
                         run_max_train, run_max_val, run_max_test = \
-                            train_network(n_levels, n_fine_epochs, model, data, optimizer, method, k, device, "ogbn-arxiv")
+                            train_network(n_levels, n_fine_epochs, model, data, optimizer, method, p, device, "ogbn-arxiv")
                         train_accs.append(run_max_train)
                         val_accs.append(run_max_val)
                         test_accs.append(run_max_test)
@@ -125,3 +125,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
