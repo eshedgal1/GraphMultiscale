@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 Below are the entry points for running multiscale training on all supported datasets.
 
-### Synthetic & Simple Datasets
+### Synthetic Datasets
 - **QTips**:  
   ```bash
   python QTips.py
